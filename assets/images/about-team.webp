@@ -1,0 +1,1 @@
+cwebp about-team.jpg -o about-team.webp -q 85 -resize 800 600
