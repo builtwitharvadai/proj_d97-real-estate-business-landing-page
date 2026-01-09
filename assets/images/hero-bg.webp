@@ -1,0 +1,6 @@
+# Using cwebp (Google's WebP encoder)
+   cwebp -q 85 source-image.jpg -o hero-bg.webp
+   
+   # Using imagemin (as specified in your task)
+   npm install imagemin imagemin-webp
+   npx imagemin source-image.jpg --plugin=webp > hero-bg.webp
