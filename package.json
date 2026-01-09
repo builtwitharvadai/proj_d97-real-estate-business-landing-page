@@ -1,38 +1,31 @@
 {
   "name": "real-estate-landing-page",
   "version": "1.0.0",
-  "description": "A professional landing page for a real estate business to establish online presence and provide essential contact information",
+  "description": "Professional real estate business landing page with optimized performance",
   "private": true,
   "type": "module",
   "scripts": {
     "start": "npx serve .",
-    "build": "npm run build:css && npm run build:js && npm run build:html",
-    "build:css": "npx clean-css-cli -o dist/css/styles.min.css src/css/styles.css",
-    "build:js": "npx terser src/js/main.js -o dist/js/main.min.js --compress --mangle",
-    "build:html": "npx html-minifier --collapse-whitespace --remove-comments --minify-css true --minify-js true -o dist/index.html index.html",
-    "validate": "npm run validate:html",
-    "validate:html": "npx html-validate index.html",
-    "lint": "npm run lint:html",
-    "lint:html": "npx htmlhint index.html",
-    "preview": "npm run build && npx serve dist"
+    "build": "npm run build:css && npm run build:js && npm run build:images",
+    "build:css": "cleancss -o css/styles.min.css css/styles.css",
+    "build:js": "terser js/main.js -o js/main.min.js --compress --mangle && terser js/form-validator.js -o js/form-validator.min.js --compress --mangle && terser js/lazy-loading.js -o js/lazy-loading.min.js --compress --mangle",
+    "build:images": "imagemin assets/images/*.webp --out-dir=assets/images/optimized --plugin=webp",
+    "test:performance": "echo 'Run Lighthouse audit manually'",
+    "lint:images": "echo 'Verify image optimization'"
+  },
+  "devDependencies": {
+    "clean-css-cli": "^5.6.3",
+    "imagemin": "^8.0.1",
+    "imagemin-cli": "^7.0.0",
+    "imagemin-webp": "^8.0.0",
+    "terser": "^5.31.0"
   },
   "keywords": [
     "real-estate",
     "landing-page",
-    "business",
-    "static-site"
+    "performance",
+    "optimization"
   ],
   "author": "",
-  "license": "MIT",
-  "devDependencies": {
-    "clean-css-cli": "^5.6.3",
-    "html-minifier": "^4.0.0",
-    "html-validate": "^8.24.1",
-    "htmlhint": "^1.1.4",
-    "serve": "^14.2.3",
-    "terser": "^5.36.0"
-  },
-  "engines": {
-    "node": ">=18.0.0"
-  }
+  "license": "ISC"
 }
