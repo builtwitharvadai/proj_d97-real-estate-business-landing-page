@@ -1,0 +1,347 @@
+/* ============================================
+   CSS RESET - MODERN CROSS-BROWSER NORMALIZATION
+   ============================================ */
+
+/* Box sizing reset with inheritance */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margins and padding */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* HTML and body foundation */
+html {
+  /* Prevent font size adjustments on orientation change */
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  
+  /* Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+  /* Enable smooth scrolling */
+  scroll-behavior: smooth;
+  
+  /* Set base font size */
+  font-size: 16px;
+  
+  /* Prevent horizontal overflow */
+  overflow-x: hidden;
+}
+
+/* Body defaults */
+body {
+  /* Minimum height for full viewport */
+  min-height: 100vh;
+  min-height: 100dvh;
+  
+  /* Default line height for readability */
+  line-height: 1.5;
+  
+  /* Prevent horizontal overflow */
+  overflow-x: hidden;
+  
+  /* Enable font kerning */
+  text-rendering: optimizeLegibility;
+  font-kerning: normal;
+  
+  /* Improve font rendering on Windows */
+  font-feature-settings: "kern" 1;
+  font-variant-ligatures: common-ligatures;
+}
+
+/* Remove list styles */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Reset heading styles */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+}
+
+/* Reset paragraph margins */
+p {
+  margin: 0;
+}
+
+/* Reset link styles */
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+/* Reset button styles */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: inherit;
+  color: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+  appearance: button;
+  background-color: transparent;
+  background-image: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Remove default button focus outline */
+button:focus,
+[type="button"]:focus,
+[type="reset"]:focus,
+[type="submit"]:focus {
+  outline: none;
+}
+
+/* Reset fieldset styles */
+fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Reset legend styles */
+legend {
+  padding: 0;
+}
+
+/* Reset form element styles */
+input,
+textarea,
+select {
+  background-color: transparent;
+  border: none;
+}
+
+/* Remove default textarea resize handle */
+textarea {
+  resize: vertical;
+}
+
+/* Remove number input spinners */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+/* Remove search input cancel button and decoration */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+/* Reset table styles */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Reset table cell styles */
+td,
+th {
+  padding: 0;
+}
+
+/* Media elements */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Remove border on images inside links */
+img {
+  border-style: none;
+}
+
+/* SVG fallback */
+svg {
+  overflow: hidden;
+  vertical-align: middle;
+}
+
+/* Reset iframe styles */
+iframe {
+  border: none;
+}
+
+/* Reset horizontal rule */
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+  border: none;
+  border-top: 1px solid;
+  margin: 0;
+}
+
+/* Reset abbreviation styles */
+abbr[title] {
+  text-decoration: underline dotted;
+  cursor: help;
+}
+
+/* Reset code and pre styles */
+code,
+kbd,
+samp,
+pre {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 1em;
+}
+
+pre {
+  overflow: auto;
+}
+
+/* Reset small text */
+small {
+  font-size: 80%;
+}
+
+/* Prevent sub and sup from affecting line height */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Reset blockquote styles */
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
+  content: "";
+  content: none;
+}
+
+/* Reset address styles */
+address {
+  font-style: inherit;
+}
+
+/* Reset details and summary */
+details {
+  display: block;
+}
+
+summary {
+  display: list-item;
+  cursor: pointer;
+}
+
+/* Reset template and hidden elements */
+template,
+[hidden] {
+  display: none;
+}
+
+/* Accessibility improvements */
+[disabled] {
+  cursor: not-allowed;
+}
+
+[aria-busy="true"] {
+  cursor: progress;
+}
+
+[aria-disabled="true"] {
+  cursor: not-allowed;
+}
+
+/* Focus visible for keyboard navigation */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  * {
+    border-color: currentColor;
+  }
+}
+
+/* Print styles reset */
+@media print {
+  *,
+  *::before,
+  *::after {
+    background: transparent !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+}
