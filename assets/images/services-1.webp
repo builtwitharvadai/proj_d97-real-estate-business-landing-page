@@ -1,0 +1,5 @@
+# Using cwebp command-line tool
+   cwebp -q 85 services-1.png -o services-1.webp
+   
+   # Or using ImageMagick
+   convert services-1.png -quality 85 services-1.webp
