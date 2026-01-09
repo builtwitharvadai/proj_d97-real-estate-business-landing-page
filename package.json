@@ -1,0 +1,38 @@
+{
+  "name": "real-estate-landing-page",
+  "version": "1.0.0",
+  "description": "A professional landing page for a real estate business to establish online presence and provide essential contact information",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "npx serve .",
+    "build": "npm run build:css && npm run build:js && npm run build:html",
+    "build:css": "npx clean-css-cli -o dist/css/styles.min.css src/css/styles.css",
+    "build:js": "npx terser src/js/main.js -o dist/js/main.min.js --compress --mangle",
+    "build:html": "npx html-minifier --collapse-whitespace --remove-comments --minify-css true --minify-js true -o dist/index.html index.html",
+    "validate": "npm run validate:html",
+    "validate:html": "npx html-validate index.html",
+    "lint": "npm run lint:html",
+    "lint:html": "npx htmlhint index.html",
+    "preview": "npm run build && npx serve dist"
+  },
+  "keywords": [
+    "real-estate",
+    "landing-page",
+    "business",
+    "static-site"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "clean-css-cli": "^5.6.3",
+    "html-minifier": "^4.0.0",
+    "html-validate": "^8.24.1",
+    "htmlhint": "^1.1.4",
+    "serve": "^14.2.3",
+    "terser": "^5.36.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
